@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+
+<h2 class="mb-4 text-primary fw-bold text-center"> Students List</h2>
+
+<div class="row">
+  <% students.forEach(student => { %>
+    <div class="col-md-6 mb-4">
+      <div class="card student-card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title text-dark fw-semibold"><%= student.name %></h5>
+          <ul class="list-unstyled mb-0">
+            <li><span class="fw-bold text-secondary">Roll No:</span> <%= student.rollNo %></li>
+            <li><span class="fw-bold text-secondary">Course:</span> <%= student.course %></li>
+            <li><span class="fw-bold text-secondary">Batch:</span> <%= student.batch %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<%- include("../partials/footer") %>
